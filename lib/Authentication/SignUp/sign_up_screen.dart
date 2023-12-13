@@ -61,7 +61,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           Image(
                               height: 51,
                               image:
-                                  AssetImage("assets/images/happi_logo.png")),
+                              AssetImage("assets/images/happi_logo.png")),
                         ],
                       ),
                       SizedBox(

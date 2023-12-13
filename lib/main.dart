@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:happi_workers_client/Components/theme.dart';
+import 'package:happi_workers_client/ProfileCustom/profile_custom1.dart';
+import 'package:happi_workers_client/ProfileCustom/profile_custom2.dart';
 import 'package:happi_workers_client/Welcome/welcome_page1.dart';
 import 'package:happi_workers_client/constants.dart';
 
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Happiworkers',
         theme: theme(),
-        home: MyHomePage(),
+        home: ProfileCustomization2(),
       ),
     );
   }
