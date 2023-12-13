@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:happi_workers_pract/Authentication/Password/password_confirm.dart';
-import 'package:happi_workers_pract/constants.dart';
+import 'package:happi_workers_client/Authentication/Password/password_confirm.dart';
+import 'package:happi_workers_client/constants.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});

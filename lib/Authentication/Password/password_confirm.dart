@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:happi_workers_pract/Authentication/Password/reset_password.dart';
-import 'package:happi_workers_pract/constants.dart';
+import 'package:happi_workers_client/Authentication/Password/reset_password.dart';
+import 'package:happi_workers_client/constants.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
 
 class PasswordConfirm extends StatefulWidget {

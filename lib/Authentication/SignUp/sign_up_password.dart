@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:happi_workers_pract/Authentication/SignIn/sign_in_screen.dart';
-import 'package:happi_workers_pract/Onboarding/onboarding_1.dart';
-import 'package:happi_workers_pract/constants.dart';
+import 'package:happi_workers_client/Authentication/SignIn/sign_in_screen.dart';
+import 'package:happi_workers_client/constants.dart';
 
 class SignUpPassword extends StatefulWidget {
   const SignUpPassword({super.key});
@@ -235,7 +234,7 @@ class _SignUpPasswordState extends State<SignUpPassword> {
                 children: [
               InkWell(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => Onboarding1()));
+                 // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => Onboarding1()));
                 },
                 child: Container(
                   padding: EdgeInsets.all(20),

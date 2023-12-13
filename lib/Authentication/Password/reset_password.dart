@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:happi_workers_pract/constants.dart';
+import 'package:happi_workers_client/constants.dart';
 
 class ResetPassword extends StatefulWidget {
   const ResetPassword({super.key});

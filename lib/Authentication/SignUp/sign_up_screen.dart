@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:happi_workers_pract/Authentication/SignIn/sign_in_screen.dart';
-import 'package:happi_workers_pract/Authentication/SignUp/sign_up_password.dart';
-import 'package:happi_workers_pract/constants.dart';
+import 'package:happi_workers_client/Authentication/SignIn/sign_in_screen.dart';
+import 'package:happi_workers_client/Authentication/SignUp/sign_up_password.dart';
+import 'package:happi_workers_client/constants.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
