@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:happi_workers_client/Components/theme.dart';
+import 'package:happi_workers_client/HomePage/onboarding_screen.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom1.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom2.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom3.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Happiworkers',
         theme: theme(),
-        home: ProfileCustomization9(),
+        home: MyHomePage(),
       ),
     );
   }
@@ -68,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (BuildContext context, AsyncSnapshot snapshot) {
 
           //return api_key == null ? SplashScreen() : HomeScreen();
-          return WelcomePage1();
+          return OnboardingScreen();
 
         });
   }
