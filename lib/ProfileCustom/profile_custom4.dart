@@ -101,7 +101,7 @@ class _ProfileCustomization4State extends State<ProfileCustomization4> {
 
 
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
 
 
@@ -130,44 +130,114 @@ class _ProfileCustomization4State extends State<ProfileCustomization4> {
                                   ),
                                 ],
                               ),
+                              SizedBox(
+                                height: 20,
+                              ),
 
 
                               Container(
-                                child: Row(
+                                padding: EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(20)
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    CircleAvatar(
-                                      radius: 40,
-                                      backgroundImage: AssetImage("assets/images/user.png"),
-                                    ),
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                    Row(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Text(
-                                          "Dianne Russell",
-                                          style: TextStyle(
-                                            fontSize: 24,),
+                                        CircleAvatar(
+                                          radius: 40,
+                                          backgroundImage: AssetImage("assets/images/user.png"),
                                         ),
-                                        Container(
-                                          padding: EdgeInsets.all(5),
-                                          decoration: BoxDecoration(
-                                            color: happiGreen.withOpacity(0.1),
-                                            borderRadius: BorderRadius.circular(5)
-                                          ),
-                                          child: Text(
-                                            "English",
-                                            style: TextStyle(
-                                              fontSize: 10,
-                                            color: happiGreen),
-                                          ),
+                                        SizedBox(
+                                          width: 20,
                                         ),
+                                        Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              "Dianne Russell",
+                                              style: TextStyle(
+                                                fontSize: 24,),
+                                            ),
+                                            Container(
+                                              padding: EdgeInsets.all(5),
+                                              decoration: BoxDecoration(
+                                                color: happiGreen.withOpacity(0.1),
+                                                borderRadius: BorderRadius.circular(5)
+                                              ),
+                                              child: Text(
+                                                "English",
+                                                style: TextStyle(
+                                                  fontSize: 10,
+                                                color: happiGreen),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+
+
+
                                       ],
                                     ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      "COACH",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                      fontWeight: FontWeight.w600),
+                                    ),
 
+                                    SizedBox(
+                                      height: 30,
+                                    ),
+                                    InkWell(
+                                      onTap: () {
+                                        /*Navigator.of(context).push(MaterialPageRoute(
+                                            builder: (BuildContext context) =>
+                                                SignUpPassword()));*/
+                                      },
+                                      child: Container(
+                                        padding: EdgeInsets.all(20),
+                                        decoration: BoxDecoration(
+                                            color: happiLghtPurple,
+                                            borderRadius: BorderRadius.circular(15)),
+                                        child: Center(
+                                          child: Text(
+                                            "Book an appointment",
+                                            style: TextStyle(color: happiPrimary),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
                                   ],
                                 ),
-                              )
+                              ),
+                              SizedBox(
+                                height: 50,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                 /* Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          SignUpPassword()));*/
+                                },
+                                child: Container(
+                                  padding: EdgeInsets.all(20),
+                                  decoration: BoxDecoration(
+                                      color: happiPrimary,
+                                      borderRadius: BorderRadius.circular(15)),
+                                  child: Center(
+                                    child: Text(
+                                      "Continue to dashboard",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                              ),
 
 
 

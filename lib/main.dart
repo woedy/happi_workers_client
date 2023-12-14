@@ -6,6 +6,11 @@ import 'package:happi_workers_client/ProfileCustom/profile_custom1.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom2.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom3.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom4.dart';
+import 'package:happi_workers_client/ProfileCustom/profile_custom5.dart';
+import 'package:happi_workers_client/ProfileCustom/profile_custom6.dart';
+import 'package:happi_workers_client/ProfileCustom/profile_custom7.dart';
+import 'package:happi_workers_client/ProfileCustom/profile_custom8.dart';
+import 'package:happi_workers_client/ProfileCustom/profile_custom9.dart';
 import 'package:happi_workers_client/Welcome/welcome_page1.dart';
 import 'package:happi_workers_client/constants.dart';
 
@@ -32,7 +37,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Happiworkers',
         theme: theme(),
-        home: ProfileCustomization4(),
+        home: ProfileCustomization9(),
       ),
     );
   }
