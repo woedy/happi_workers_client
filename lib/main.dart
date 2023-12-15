@@ -12,6 +12,7 @@ import 'package:happi_workers_client/ProfileCustom/profile_custom6.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom7.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom8.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom9.dart';
+import 'package:happi_workers_client/Sessions/sessions_screen.dart';
 import 'package:happi_workers_client/Welcome/welcome_page1.dart';
 import 'package:happi_workers_client/constants.dart';
 
@@ -69,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (BuildContext context, AsyncSnapshot snapshot) {
 
           //return api_key == null ? SplashScreen() : HomeScreen();
-          return OnboardingScreen();
+          return SessionsScreen();
 
         });
   }
