@@ -4,6 +4,10 @@ import 'package:flutter/services.dart';
 import 'package:happi_workers_client/Components/theme.dart';
 import 'package:happi_workers_client/Feedback/feedback_screen.dart';
 import 'package:happi_workers_client/HomePage/onboarding_screen.dart';
+import 'package:happi_workers_client/LMS/lms_screen.dart';
+import 'package:happi_workers_client/LMS/lms_screen_course.dart';
+import 'package:happi_workers_client/LMS/lms_screen_course_detail.dart';
+import 'package:happi_workers_client/LMS/lms_screen_course_detail2.dart';
 import 'package:happi_workers_client/Messages/my_chat_screen.dart';
 import 'package:happi_workers_client/Notifications/notifications.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom1.dart';
@@ -79,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (BuildContext context, AsyncSnapshot snapshot) {
 
           //return api_key == null ? SplashScreen() : HomeScreen();
-          return SettingsScreen();
+          return LMSCourseDetail2();
 
         });
   }
