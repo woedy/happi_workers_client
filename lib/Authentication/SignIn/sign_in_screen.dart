@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:happi_workers_client/Authentication/Password/password_screen.dart';
 import 'package:happi_workers_client/Authentication/SignUp/sign_up_screen.dart';
 import 'package:happi_workers_client/HomePage/onboarding_screen.dart';
+import 'package:happi_workers_client/Sessions/sessions_screen.dart';
 import 'package:happi_workers_client/constants.dart';
 import 'package:happi_workers_client/main.dart';
 
@@ -230,7 +231,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 children: [
                   InkWell(
                     onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => OnboardingScreen()));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionsScreen()));
                     },
                     child: Container(
                       padding: EdgeInsets.all(20),

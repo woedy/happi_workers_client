@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:happi_workers_client/Sessions/session_history_detail.dart';
+import 'package:happi_workers_client/Sessions/session_history_cancel.dart';
 import 'package:happi_workers_client/constants.dart';
 
 

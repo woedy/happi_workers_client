@@ -2,6 +2,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/Components/generic_loading_dialogbox.dart';
+import 'package:happi_workers_client/Notifications/notifications.dart';
+import 'package:happi_workers_client/ProfileScreen/user_profile_screen.dart';
+import 'package:happi_workers_client/Sessions/session_history_reschedule.dart';
+import 'package:happi_workers_client/VideoCall/video_call_screen.dart';
+import 'package:happi_workers_client/Webinars/webinars.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -58,7 +64,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                              padding: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
 
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +94,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                         children: [
                                           InkWell(
                                             onTap: (){
-                                              //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => NotificationsScreen()));
+                                              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => NotificationsScreen()));
 
                                             },
                                             child: Container(
@@ -105,7 +111,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                           ),
                                           InkWell(
                                             onTap: (){
-                                              //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => PersonalInfo()));
+                                              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => UserProfileScreen()));
 
                                             },
                                             child: CircleAvatar(
@@ -239,7 +245,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                                     children: [
                                                       InkWell(
                                                         onTap: (){
-                                                        /*  showDialog(
+                                                          showDialog(
                                                             context: context,
                                                             builder: (BuildContext context) {
                                                               //  return LoadingDialogBox(text: "Loading Here....",); // Display your custom dialog
@@ -252,7 +258,6 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                                             Navigator.of(context).pop();
                                                             Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => VideoCallScreen()));
                                                           });
-                                    */
                                                         },
                                                         child: Container(
                                                             padding: EdgeInsets.all(10),
@@ -268,16 +273,22 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                                       SizedBox(
                                                         width: 10,
                                                       ),
-                                                      Container(
-                                                          padding: EdgeInsets.all(10),
-                                                          width: 120,
-                                                          decoration: BoxDecoration(
-                                                            color: Colors.white,
-                                                            borderRadius: BorderRadius.circular(20),
+                                                      InkWell(
+                                                        onTap: (){
+                                                          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionHistoryReschedule()));
 
-                                                          ),
+                                                        },
+                                                        child: Container(
+                                                            padding: EdgeInsets.all(10),
+                                                            width: 120,
+                                                            decoration: BoxDecoration(
+                                                              color: Colors.white,
+                                                              borderRadius: BorderRadius.circular(20),
 
-                                                          child: Center(child: Text("Reschedule", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                            ),
+
+                                                            child: Center(child: Text("Reschedule", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                      ),
                                                       SizedBox(
                                                         width: 10,
                                                       ),
@@ -365,7 +376,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                                     children: [
                                                       InkWell(
                                                         onTap: (){
-                                                          /*  showDialog(
+                                                            showDialog(
                                                             context: context,
                                                             builder: (BuildContext context) {
                                                               //  return LoadingDialogBox(text: "Loading Here....",); // Display your custom dialog
@@ -378,7 +389,6 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                                             Navigator.of(context).pop();
                                                             Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => VideoCallScreen()));
                                                           });
-                                    */
                                                         },
                                                         child: Container(
                                                             padding: EdgeInsets.all(10),
@@ -394,16 +404,22 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                                       SizedBox(
                                                         width: 10,
                                                       ),
-                                                      Container(
-                                                          padding: EdgeInsets.all(10),
-                                                          width: 120,
-                                                          decoration: BoxDecoration(
-                                                            color: Colors.white,
-                                                            borderRadius: BorderRadius.circular(20),
+                                                      InkWell(
+                                                        onTap: (){
+                                                          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionHistoryReschedule()));
 
-                                                          ),
+                                                        },
+                                                        child: Container(
+                                                            padding: EdgeInsets.all(10),
+                                                            width: 120,
+                                                            decoration: BoxDecoration(
+                                                              color: Colors.white,
+                                                              borderRadius: BorderRadius.circular(20),
 
-                                                          child: Center(child: Text("Reschedule", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                            ),
+
+                                                            child: Center(child: Text("Reschedule", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                      ),
                                                       SizedBox(
                                                         width: 10,
                                                       ),
@@ -474,6 +490,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                   ),
                                   Row(
                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
                                       Column(
                                         children: [
@@ -493,7 +510,12 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                       SizedBox(
                                         width: 10,
                                       ),
-                                      Text("Previous", style: TextStyle(color: happiPrimary, fontSize: 12),),
+                                      InkWell(
+                                          onTap: (){
+                                            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => WebinarsScreen()));
+
+                                          },
+                                          child: Text("View All", style: TextStyle(color: happiPrimary, fontSize: 12),)),
 
                                     ],
                                   ),
@@ -505,48 +527,8 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                       scrollDirection: Axis.horizontal,
                                       children: [
                                         Container(
-                                          height: 209,
-                                          width: 335,
-                                          decoration: BoxDecoration(
-                                            color: happiDark,
-                                            borderRadius: BorderRadius.circular(20),
-
-                                          ),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.center,
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            children: [
-                                              Text("You have no upcoming appointments yet!", style: TextStyle(color: Colors.white, fontSize: 10),),
-                                              SizedBox(
-                                                height: 40,
-                                              ),
-
-                                              InkWell(
-                                                onTap: (){
-                                                 // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MyAvailability()));
-
-                                                },
-                                                child: Container(
-                                                    padding: EdgeInsets.all(15),
-                                                    width: 250,
-                                                    decoration: BoxDecoration(
-                                                      color: happiGreen,
-                                                      borderRadius: BorderRadius.circular(15),
-
-                                                    ),
-
-                                                    child: Center(child: Text("Schedule an appointment", style: TextStyle(color: Colors.black, fontSize: 10),))),
-                                              ),
-
-                                            ],
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Container(
-                                          height: 209,
-                                          width: 335,
+                                          //height: 100,
+                                          width: 360,
                                           decoration: BoxDecoration(
                                             color: happiDark,
                                             borderRadius: BorderRadius.circular(20),
@@ -562,6 +544,27 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                                   crossAxisAlignment: CrossAxisAlignment.start,
 
                                                   children: [
+
+                                                    Row(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: [
+                                                        Expanded(child: Text("Appointment with Marvin", style: TextStyle(color: Colors.white, fontSize: 20),)),
+
+                                                        Text("9/23/16 at 1500GMT", style: TextStyle(color: happiGreen, fontWeight: FontWeight.w900, fontSize: 12),),
+                                                      ],
+                                                    ),
+
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+
+                                                    Text("Understand the roots of stress and discover effective strategies to manage it in a healthy and productive way.", style: TextStyle(color: Colors.white, fontSize: 12),),
+
+
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+
                                                     Row(
                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
@@ -578,17 +581,10 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                                             Text("Julia Reddington", style: TextStyle(color: Colors.white, fontSize: 12),),
                                                           ],
                                                         ),
-                                                        Icon(Icons.info_outline, color: Colors.white,)
                                                       ],
                                                     ),
                                                     SizedBox(
-                                                      height: 10,
-                                                    ),
-                                                    Text("9/23/16 at 10Am", style: TextStyle(color: happiGreen, fontWeight: FontWeight.w900, fontSize: 15),),
-                                                    Text("curtis.weaver@example.com", style: TextStyle(color: Colors.white, fontSize: 12),),
-
-                                                    SizedBox(
-                                                      height: 40,
+                                                      height: 5,
                                                     ),
                                                   ],
                                                 ),
@@ -603,7 +599,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                                     children: [
                                                       InkWell(
                                                         onTap: (){
-                                                        /*  showDialog(
+                                                          showDialog(
                                                             context: context,
                                                             builder: (BuildContext context) {
                                                               //  return LoadingDialogBox(text: "Loading Here....",); // Display your custom dialog
@@ -616,10 +612,9 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                                             Navigator.of(context).pop();
                                                             Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => VideoCallScreen()));
                                                           });
-                                    */
                                                         },
                                                         child: Container(
-                                                            padding: EdgeInsets.all(15),
+                                                            padding: EdgeInsets.all(10),
                                                             width: 120,
                                                             decoration: BoxDecoration(
                                                               color: happiGreen,
@@ -632,16 +627,153 @@ class _SessionsScreenState extends State<SessionsScreen> {
                                                       SizedBox(
                                                         width: 10,
                                                       ),
-                                                      Container(
-                                                          padding: EdgeInsets.all(15),
-                                                          width: 120,
-                                                          decoration: BoxDecoration(
-                                                            color: Colors.white,
-                                                            borderRadius: BorderRadius.circular(20),
+                                                      InkWell(
+                                                        onTap: (){
+                                                          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionHistoryReschedule()));
 
-                                                          ),
+                                                        },
+                                                        child: Container(
+                                                            padding: EdgeInsets.all(10),
+                                                            width: 120,
+                                                            decoration: BoxDecoration(
+                                                              color: Colors.white,
+                                                              borderRadius: BorderRadius.circular(20),
 
-                                                          child: Center(child: Text("Cancel", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                            ),
+
+                                                            child: Center(child: Text("Reschedule", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                      ),
+                                                      SizedBox(
+                                                        width: 10,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
+
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Container(
+                                          //height: 100,
+                                          width: 360,
+                                          decoration: BoxDecoration(
+                                            color: happiDark,
+                                            borderRadius: BorderRadius.circular(20),
+
+                                          ),
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal:15.0),
+                                                child: Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+
+                                                  children: [
+
+                                                    Row(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: [
+                                                        Expanded(child: Text("Appointment with Marvin", style: TextStyle(color: Colors.white, fontSize: 20),)),
+
+                                                        Text("9/23/16 at 1500GMT", style: TextStyle(color: happiGreen, fontWeight: FontWeight.w900, fontSize: 12),),
+                                                      ],
+                                                    ),
+
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+
+                                                    Text("Understand the roots of stress and discover effective strategies to manage it in a healthy and productive way.", style: TextStyle(color: Colors.white, fontSize: 12),),
+
+
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+
+                                                    Row(
+                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                                                      children: [
+                                                        Row(
+                                                          children: [
+
+                                                            CircleAvatar(
+                                                              backgroundImage: AssetImage("assets/images/user2.png"),
+                                                            ),
+                                                            SizedBox(
+                                                              width: 10,
+                                                            ),
+                                                            Text("Julia Reddington", style: TextStyle(color: Colors.white, fontSize: 12),),
+                                                          ],
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment.end,
+                                                children: [
+
+
+                                                  Row(
+                                                    children: [
+                                                      InkWell(
+                                                        onTap: (){
+                                                          showDialog(
+                                                            context: context,
+                                                            builder: (BuildContext context) {
+                                                              //  return LoadingDialogBox(text: "Loading Here....",); // Display your custom dialog
+                                                              //return SuccessDialogBox();
+                                                              return LoadingDialogBox(text: 'Wait as your session loads',);
+                                                            },
+                                                          );
+
+                                                          Future.delayed(Duration(seconds: 2), () {
+                                                            Navigator.of(context).pop();
+                                                            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => VideoCallScreen()));
+                                                          });
+                                                        },
+                                                        child: Container(
+                                                            padding: EdgeInsets.all(10),
+                                                            width: 120,
+                                                            decoration: BoxDecoration(
+                                                              color: happiGreen,
+                                                              borderRadius: BorderRadius.circular(20),
+
+                                                            ),
+
+                                                            child: Center(child: Text("Join", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                      ),
+                                                      SizedBox(
+                                                        width: 10,
+                                                      ),
+                                                      InkWell(
+                                                        onTap: (){
+                                                          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionHistoryReschedule()));
+
+                                                        },
+                                                        child: Container(
+                                                            padding: EdgeInsets.all(10),
+                                                            width: 120,
+                                                            decoration: BoxDecoration(
+                                                              color: Colors.white,
+                                                              borderRadius: BorderRadius.circular(20),
+
+                                                            ),
+
+                                                            child: Center(child: Text("Reschedule", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                      ),
                                                       SizedBox(
                                                         width: 10,
                                                       ),
