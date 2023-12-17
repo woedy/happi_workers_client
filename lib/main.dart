@@ -27,6 +27,8 @@ import 'package:happi_workers_client/Sessions/sessions_book.dart';
 import 'package:happi_workers_client/Sessions/sessions_screen_detail.dart';
 import 'package:happi_workers_client/Settings/settings_screen.dart';
 import 'package:happi_workers_client/Welcome/welcome_page1.dart';
+import 'package:happi_workers_client/WellBeing/well_being_kit.dart';
+import 'package:happi_workers_client/WellBeing/well_being_practitioners.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -83,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (BuildContext context, AsyncSnapshot snapshot) {
 
           //return api_key == null ? SplashScreen() : HomeScreen();
-          return LMSCourseDetail2();
+          return WellBeingPractitioners();
 
         });
   }
