@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:happi_workers_client/Components/theme.dart';
+import 'package:happi_workers_client/Feedback/feedback_screen.dart';
 import 'package:happi_workers_client/HomePage/onboarding_screen.dart';
+import 'package:happi_workers_client/Messages/my_chat_screen.dart';
+import 'package:happi_workers_client/Notifications/notifications.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom1.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom2.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom3.dart';
@@ -12,7 +15,13 @@ import 'package:happi_workers_client/ProfileCustom/profile_custom6.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom7.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom8.dart';
 import 'package:happi_workers_client/ProfileCustom/profile_custom9.dart';
+import 'package:happi_workers_client/Sessions/history_1.dart';
+import 'package:happi_workers_client/Sessions/history_detail.dart';
+import 'package:happi_workers_client/Sessions/session_availability.dart';
 import 'package:happi_workers_client/Sessions/sessions_screen.dart';
+import 'package:happi_workers_client/Sessions/sessions_book.dart';
+import 'package:happi_workers_client/Sessions/sessions_screen_detail.dart';
+import 'package:happi_workers_client/Settings/settings_screen.dart';
 import 'package:happi_workers_client/Welcome/welcome_page1.dart';
 import 'package:happi_workers_client/constants.dart';
 
@@ -70,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (BuildContext context, AsyncSnapshot snapshot) {
 
           //return api_key == null ? SplashScreen() : HomeScreen();
-          return SessionsScreen();
+          return SettingsScreen();
 
         });
   }
