@@ -2,6 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/Notifications/notifications.dart';
+import 'package:happi_workers_client/ProfileScreen/user_profile_screen.dart';
+import 'package:happi_workers_client/Sessions/session_history.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -84,7 +87,7 @@ class _SessionsDetailsState extends State<SessionsDetails> {
                                         children: [
                                           InkWell(
                                             onTap: (){
-                                              //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => NotificationsScreen()));
+                                              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => NotificationsScreen()));
 
                                             },
                                             child: Container(
@@ -101,7 +104,7 @@ class _SessionsDetailsState extends State<SessionsDetails> {
                                           ),
                                           InkWell(
                                             onTap: (){
-                                              //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => PersonalInfo()));
+                                              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => UserProfileScreen()));
 
                                             },
                                             child: CircleAvatar(
@@ -164,7 +167,12 @@ class _SessionsDetailsState extends State<SessionsDetails> {
                                           )
                                         ],
                                       ),
-                                      Text("History", style: TextStyle(color: Colors.red, fontSize: 12),),
+                                      InkWell(
+                                        onTap: (){
+                                          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionHistory()));
+
+                                        },
+                                          child: Text("History", style: TextStyle(color: Colors.red, fontSize: 12),)),
 
                                     ],
                                   ),

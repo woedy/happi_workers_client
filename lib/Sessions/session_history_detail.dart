@@ -2,17 +2,18 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/Feedback/feedback_screen.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
-class HistoryDetails extends StatefulWidget {
-  const HistoryDetails({super.key});
+class SessionHistoryCancel extends StatefulWidget {
+  const SessionHistoryCancel({super.key});
 
   @override
-  State<HistoryDetails> createState() => _HistoryDetailsState();
+  State<SessionHistoryCancel> createState() => _SessionHistoryCancelState();
 }
 
-class _HistoryDetailsState extends State<HistoryDetails> {
+class _SessionHistoryCancelState extends State<SessionHistoryCancel> {
   final _formKey = GlobalKey<FormState>();
   File? _image;
   String? selectedCertificate;
@@ -266,16 +267,22 @@ class _HistoryDetailsState extends State<HistoryDetails> {
                                                             Row(
                                                               children: [
 
-                                                                Container(
-                                                                    padding: EdgeInsets.all(10),
-                                                                    width: 120,
-                                                                    decoration: BoxDecoration(
-                                                                      color: Colors.white,
-                                                                      borderRadius: BorderRadius.circular(20),
+                                                                InkWell(
+                                                                  onTap: (){
+                                                                    Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => FeedbackScreen()));
 
-                                                                    ),
+                                                                  },
+                                                                  child: Container(
+                                                                      padding: EdgeInsets.all(10),
+                                                                      width: 120,
+                                                                      decoration: BoxDecoration(
+                                                                        color: Colors.white,
+                                                                        borderRadius: BorderRadius.circular(20),
 
-                                                                    child: Center(child: Text("Cancel Session", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                                      ),
+
+                                                                      child: Center(child: Text("Cancel Session", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                                ),
                                                                 SizedBox(
                                                                   width: 10,
                                                                 ),

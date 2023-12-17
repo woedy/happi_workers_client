@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:happi_workers_client/Authentication/SignIn/sign_in_screen.dart';
 import 'package:happi_workers_client/Authentication/SignUp/sign_up_password.dart';
+import 'package:happi_workers_client/ProfileCustom/profile_custom5.dart';
 import 'package:happi_workers_client/constants.dart';
 import 'dart:math' as math;
 
@@ -196,9 +197,9 @@ class _ProfileCustomization4State extends State<ProfileCustomization4> {
                                     ),
                                     InkWell(
                                       onTap: () {
-                                        /*Navigator.of(context).push(MaterialPageRoute(
+                                        Navigator.of(context).push(MaterialPageRoute(
                                             builder: (BuildContext context) =>
-                                                SignUpPassword()));*/
+                                                ProfileCustomization5()));
                                       },
                                       child: Container(
                                         padding: EdgeInsets.all(20),

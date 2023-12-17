@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/ProfileCustom/profile_custom2.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -228,7 +229,7 @@ class _ProfileCustomization1State extends State<ProfileCustomization1> {
 
                                       InkWell(
                                         onTap: () {
-                                          //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => PracticedDetails()));
+                                          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ProfileCustomization2()));
                                         },
                                         child: Container(
                                           padding: EdgeInsets.all(20),

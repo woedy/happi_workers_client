@@ -2,17 +2,18 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/Sessions/session_history_detail.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
-class History1 extends StatefulWidget {
-  const History1({super.key});
+class SessionHistory extends StatefulWidget {
+  const SessionHistory({super.key});
 
   @override
-  State<History1> createState() => _History1State();
+  State<SessionHistory> createState() => _SessionHistoryState();
 }
 
-class _History1State extends State<History1> {
+class _SessionHistoryState extends State<SessionHistory> {
   final _formKey = GlobalKey<FormState>();
   File? _image;
   String? selectedCertificate;
@@ -202,16 +203,22 @@ class _History1State extends State<History1> {
                                                                   Row(
                                                                     children: [
                                               
-                                                                      Container(
-                                                                          padding: EdgeInsets.all(10),
-                                                                          width: 120,
-                                                                          decoration: BoxDecoration(
-                                                                            color: Colors.white,
-                                                                            borderRadius: BorderRadius.circular(20),
-                                              
-                                                                          ),
-                                              
-                                                                          child: Center(child: Text("Cancel", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                                      InkWell(
+                                                                        onTap: (){
+                                                                          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionHistoryCancel()));
+
+                                                                        },
+                                                                        child: Container(
+                                                                            padding: EdgeInsets.all(10),
+                                                                            width: 120,
+                                                                            decoration: BoxDecoration(
+                                                                              color: Colors.white,
+                                                                              borderRadius: BorderRadius.circular(20),
+
+                                                                            ),
+
+                                                                            child: Center(child: Text("Cancel", style: TextStyle(color: Colors.black, fontSize: 10),))),
+                                                                      ),
                                                                       SizedBox(
                                                                         width: 10,
                                                                       ),

@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/HomePage/onboarding_screen.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -277,7 +278,7 @@ class _ProfileCustomization9State extends State<ProfileCustomization9> {
                                             InkWell(
                                               onTap: () {
 
-                                                //  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MyDeviceCheck()));
+                                                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => OnboardingScreen()));
 
                                               },
                                               child: Container(
@@ -287,7 +288,7 @@ class _ProfileCustomization9State extends State<ProfileCustomization9> {
                                                     borderRadius: BorderRadius.circular(15)),
                                                 child: Center(
                                                   child: Text(
-                                                    "Continue",
+                                                    "Done",
                                                     style: TextStyle(color: Colors.white),
                                                   ),
                                                 ),

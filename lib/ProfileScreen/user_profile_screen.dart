@@ -2,18 +2,15 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:happi_workers_client/ProfileCustom/profile_custom7.dart';
-import 'package:happi_workers_client/constants.dart';
 
-
-class ProfileCustomization6 extends StatefulWidget {
-  const ProfileCustomization6({super.key});
+class UserProfileScreen extends StatefulWidget {
+  const UserProfileScreen({super.key});
 
   @override
-  State<ProfileCustomization6> createState() => _ProfileCustomization6State();
+  State<UserProfileScreen> createState() => _UserProfileScreenState();
 }
 
-class _ProfileCustomization6State extends State<ProfileCustomization6> {
+class _UserProfileScreenState extends State<UserProfileScreen> {
   final _formKey = GlobalKey<FormState>();
   File? _image;
   String? selectedCertificate;
@@ -118,123 +115,129 @@ class _ProfileCustomization6State extends State<ProfileCustomization6> {
                                             ),
 
                                             Text(
-                                              "Dianne Russell",
+                                              "Theresa Debb",
                                               style: TextStyle(
-                                                  fontSize: 25,
-                                                ),
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w900,
+                                                  color: Colors.grey),
                                             ),
                                             SizedBox(
                                               height: 10,
                                             ),
 
-
-
+                                            Divider(),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
 
 
                                             Column(
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      "Email: ",
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          fontWeight: FontWeight.w900,
+
+                                                          color: Colors.black),
+                                                    ),
+                                                    Text(
+                                                      "gertrude@gmail.com",
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          color: Colors.black),
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      "Work Email: ",
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          fontWeight: FontWeight.w900,
+
+                                                          color: Colors.black),
+                                                    ),
+                                                    Text(
+                                                      "gertrude@gmail.com",
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          color: Colors.black),
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      "Contact",
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          fontWeight: FontWeight.w900,
+
+                                                          color: Colors.black),
+                                                    ),
+                                                    Text(
+                                                      "+1 (609) 933-44-22",
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          color: Colors.black),
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      "Country",
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          fontWeight: FontWeight.w900,
+
+                                                          color: Colors.black),
+                                                    ),
+                                                    Text(
+                                                      "Wake Island",
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          color: Colors.black),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: 30,
+                                            ),
+                                            Divider(),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
-                                                SizedBox(
-                                                  height: 20,
+                                                Text(
+                                                  "Bio",
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.w900,
+                                                      color: Colors.black),
                                                 ),
-                                                Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-
-                                                  children: [
-                                                    Text(
-                                                      "Description",
-                                                      style: TextStyle(
-                                                          fontSize: 20,
-                                                          fontWeight: FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 10,
-                                                    ),
-                                                    Text(
-                                                      "Lorem ipsum dolor sit amet consectetur. Ut consequat nunc senectus parturient diam urna sit bibendum. Ullamcorper quis ac lorem pretium volutpat sed mattis. Elementum tristique aenean eu duis fermentum. In quam id platea cursus volutpat euismod ultricies a mattis.",
-                                                      style: TextStyle(
-                                                          fontSize: 14,
-                                                          color: Colors.black),
-                                                    ),
-                                                  ],
-                                                ),
-
-
-                                                SizedBox(
-                                                  height: 20,
-                                                ),
-                                                Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      "Specialty",
-                                                      style: TextStyle(
-                                                        fontSize: 20,
-                                                        fontWeight: FontWeight.w500,
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 10,
-                                                    ),
-                                                    Text(
-                                                      "Psychologist, Coach, Mediator",
-                                                      style: TextStyle(
-                                                          fontSize: 14,
-                                                          color: Colors.black),
-                                                    ),
-                                                  ],
-                                                ),
-
-
-
-                                                SizedBox(
-                                                  height: 20,
-                                                ),
-                                                Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      "Certificates",
-                                                      style: TextStyle(
-                                                        fontSize: 20,
-                                                        fontWeight: FontWeight.w500,
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 10,
-                                                    ),
-                                                    Text(
-                                                      "Psychologist, Coach, Mediator",
-                                                      style: TextStyle(
-                                                          fontSize: 14,
-                                                          color: Colors.black),
-                                                    ),
-                                                  ],
-                                                ),
-
-                                                SizedBox(
-                                                  height: 50,
-                                                ),
-
-                                                InkWell(
-                                                  onTap: () {
-                                                    Navigator.of(context).push(MaterialPageRoute(
-                                                        builder: (BuildContext context) =>
-                                                            ProfileCustomization7()));
-                                                  },
-                                                  child: Container(
-                                                    padding: EdgeInsets.all(20),
-                                                    decoration: BoxDecoration(
-                                                        color: happiPrimary,
-                                                        borderRadius: BorderRadius.circular(15)),
-                                                    child: Center(
-                                                      child: Text(
-                                                        "Next",
-                                                        style: TextStyle(color: Colors.white),
-                                                      ),
-                                                    ),
-                                                  ),
+                                                Text(
+                                                  "Alex Thompson is a multi-talented individual known for their contributions in various fields. Born on July 10th, 1985, Alex exhibited an early curiosity and passion for learning that would shape their diverse journey.\nWith a solid educational foundation in computer science, ",
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.black),
                                                 ),
                                               ],
                                             ),
@@ -260,7 +263,6 @@ class _ProfileCustomization6State extends State<ProfileCustomization6> {
               ],
             )));
   }
-
 
 
 

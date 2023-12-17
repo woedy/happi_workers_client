@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:happi_workers_client/Authentication/SignIn/sign_in_screen.dart';
 import 'package:happi_workers_client/Authentication/SignUp/sign_up_password.dart';
+import 'package:happi_workers_client/ProfileCustom/profile_custom3.dart';
 import 'package:happi_workers_client/constants.dart';
 import 'dart:math' as math;
 
@@ -226,7 +227,7 @@ class _ProfileCustomization2State extends State<ProfileCustomization2> {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  SignUpPassword()));
+                                  ProfileCustomization3()));
                         },
                         child: Container(
                           padding: EdgeInsets.all(20),
@@ -246,7 +247,7 @@ class _ProfileCustomization2State extends State<ProfileCustomization2> {
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      SignUpPassword()));
+                                      ProfileCustomization3()));
                             },
                             child: Container(
                               padding: EdgeInsets.all(20),

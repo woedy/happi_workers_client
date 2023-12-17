@@ -2,6 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/ProfileScreen/user_profile_screen.dart';
+import 'package:happi_workers_client/Sessions/sessions_screen_detail.dart';
+import 'package:happi_workers_client/Webinars/webinars.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -80,10 +83,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                     width: 5,
                                   ),
 
-                                  CircleAvatar(
-                                    radius: 40,
-                                    backgroundImage: AssetImage("assets/images/user.png"),
+                                  InkWell(
+                                    onTap: (){
+                                      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => UserProfileScreen()));
 
+                                    },
+                                    child: CircleAvatar(
+                                      radius: 40,
+                                      backgroundImage: AssetImage("assets/images/user.png"),
+
+                                    ),
                                   ),
                                 ],
                               )
@@ -201,18 +210,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                                           SizedBox(
                                                             height: 15,
                                                           ),
-                                                          Container(
-                                                            padding: EdgeInsets.all(10),
-                                                            decoration: BoxDecoration(
-                                                              color: happiGreen,
-                                                              borderRadius: BorderRadius.circular(10)
-                                                            ),
-                                                            child: Text(
-                                                              "Continue",
-                                                              style: TextStyle(
-                                                                  fontSize: 12,
-                                                                  fontWeight: FontWeight.w400,
-                                                                  color: happiDark),
+                                                          InkWell(
+                                                            onTap: (){
+                                                              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionsDetails()));
+
+                                                            },
+                                                            child: Container(
+                                                              padding: EdgeInsets.all(10),
+                                                              decoration: BoxDecoration(
+                                                                color: happiGreen,
+                                                                borderRadius: BorderRadius.circular(10)
+                                                              ),
+                                                              child: Text(
+                                                                "Continue",
+                                                                style: TextStyle(
+                                                                    fontSize: 12,
+                                                                    fontWeight: FontWeight.w400,
+                                                                    color: happiDark),
+                                                              ),
                                                             ),
                                                           ),
 
