@@ -2,9 +2,13 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/LMS/lms_screen.dart';
+import 'package:happi_workers_client/LMS/lms_screen_course.dart';
 import 'package:happi_workers_client/ProfileScreen/user_profile_screen.dart';
+import 'package:happi_workers_client/Sessions/sessions_screen.dart';
 import 'package:happi_workers_client/Sessions/sessions_screen_detail.dart';
 import 'package:happi_workers_client/Webinars/webinars.dart';
+import 'package:happi_workers_client/WellBeing/well_being_practitioners.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -270,18 +274,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                                           SizedBox(
                                                             height: 15,
                                                           ),
-                                                          Container(
-                                                            padding: EdgeInsets.all(10),
-                                                            decoration: BoxDecoration(
-                                                              color: Colors.white,
-                                                              borderRadius: BorderRadius.circular(10)
-                                                            ),
-                                                            child: Text(
-                                                              "Visit here",
-                                                              style: TextStyle(
-                                                                  fontSize: 12,
-                                                                  fontWeight: FontWeight.w400,
-                                                                  color: happiDark),
+                                                          InkWell(
+                                                          onTap: (){
+                                                            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => LMSCourseScreen()));
+
+                                                          },
+                                                            child: Container(
+                                                              padding: EdgeInsets.all(10),
+                                                              decoration: BoxDecoration(
+                                                                color: Colors.white,
+                                                                borderRadius: BorderRadius.circular(10)
+                                                              ),
+                                                              child: Text(
+                                                                "Visit here",
+                                                                style: TextStyle(
+                                                                    fontSize: 12,
+                                                                    fontWeight: FontWeight.w400,
+                                                                    color: happiDark),
+                                                              ),
                                                             ),
                                                           ),
                                                         ],
@@ -348,18 +358,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                                           SizedBox(
                                                             height: 15,
                                                           ),
-                                                          Container(
-                                                            padding: EdgeInsets.all(10),
-                                                            decoration: BoxDecoration(
-                                                                color: happiPrimary,
-                                                                borderRadius: BorderRadius.circular(10)
-                                                            ),
-                                                            child: Text(
-                                                              "View All",
-                                                              style: TextStyle(
-                                                                  fontSize: 12,
-                                                                  fontWeight: FontWeight.w400,
-                                                                  color: Colors.white),
+                                                          InkWell(
+                                                            onTap: () {
+                                                            /*  Navigator.of(context).push(MaterialPageRoute(
+                                                                  builder: (BuildContext context) =>
+                                                                      WellBeingPractitioners()));
+                                                            */},
+                                                            child: Container(
+                                                              padding: EdgeInsets.all(10),
+                                                              decoration: BoxDecoration(
+                                                                  color: happiPrimary,
+                                                                  borderRadius: BorderRadius.circular(10)
+                                                              ),
+                                                              child: Text(
+                                                                "View All",
+                                                                style: TextStyle(
+                                                                    fontSize: 12,
+                                                                    fontWeight: FontWeight.w400,
+                                                                    color: Colors.white),
+                                                              ),
                                                             ),
                                                           ),
 
@@ -381,7 +398,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                             InkWell(
                                               onTap: () {
 
-                                                //  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MyDeviceCheck()));
+                                                 Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionsScreen()));
 
                                               },
                                               child: Container(

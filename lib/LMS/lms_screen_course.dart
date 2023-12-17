@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/LMS/lms_screen_course_detail.dart';
+import 'package:happi_workers_client/Sessions/sessions_screen.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -161,50 +163,57 @@ class _LMSCourseScreenState extends State<LMSCourseScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Row(
-                          children: [
-                            Container(
-                              height: 89,
-                              width: 130,
-                              decoration: BoxDecoration(
-                                borderRadius:BorderRadius.circular(10),
-                                image: DecorationImage(
-                                  image: AssetImage("assets/images/doctor.png"),
-                                  fit: BoxFit.cover
-                                )
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Tax Academy for Beginners", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 17),),
-                                  Text("21/04/2023", style: TextStyle(),),
-                                  Text("+100 Points", style: TextStyle(fontWeight: FontWeight.w700, color: happiPrimary),),
-
-                                ],
-                              ),
-
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-
-
-                            Column(
-                              children: [
-                                Icon(Icons.forward_outlined, color: Colors.black,),
-                                SizedBox(
-                                  height: 20,
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    LMSCourseDetail()));
+                          },
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 89,
+                                width: 130,
+                                decoration: BoxDecoration(
+                                  borderRadius:BorderRadius.circular(10),
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/images/doctor.png"),
+                                    fit: BoxFit.cover
+                                  )
                                 ),
-                                Icon(Icons.delete_outline, color: Colors.red,)
-                              ],
-                            )
-                          ],
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Tax Academy for Beginners", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 17),),
+                                    Text("21/04/2023", style: TextStyle(),),
+                                    Text("+100 Points", style: TextStyle(fontWeight: FontWeight.w700, color: happiPrimary),),
+
+                                  ],
+                                ),
+
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+
+
+                              Column(
+                                children: [
+                                  Icon(Icons.forward_outlined, color: Colors.black,),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  Icon(Icons.delete_outline, color: Colors.red,)
+                                ],
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
@@ -213,9 +222,9 @@ class _LMSCourseScreenState extends State<LMSCourseScreen> {
 
                 InkWell(
                   onTap: () {
-               /*     Navigator.of(context).push(MaterialPageRoute(
+                    Navigator.of(context).push(MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            SignUpPassword()));*/
+                            SessionsScreen()));
                   },
                   child: Container(
                     padding: EdgeInsets.all(20),
@@ -225,7 +234,7 @@ class _LMSCourseScreenState extends State<LMSCourseScreen> {
                         borderRadius: BorderRadius.circular(15)),
                     child: Center(
                       child: Text(
-                        "Continue",
+                        "Back to Dashboard",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),

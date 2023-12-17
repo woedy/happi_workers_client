@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/LMS/lms_screen_course_detail2.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -210,9 +211,9 @@ class _LMSCourseDetailState extends State<LMSCourseDetail> {
 
                 InkWell(
                   onTap: () {
-               /*     Navigator.of(context).push(MaterialPageRoute(
+                    Navigator.of(context).push(MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            SignUpPassword()));*/
+                            LMSCourseDetail2()));
                   },
                   child: Container(
                     padding: EdgeInsets.all(20),

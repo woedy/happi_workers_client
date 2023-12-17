@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/Sessions/sessions_screen.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -366,7 +367,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
 
                                       InkWell(
                                         onTap: () {
-                                          //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MyDocuments()));
+                                          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionsScreen()));
                                         },
                                         child: Container(
                                           padding: EdgeInsets.all(20),
