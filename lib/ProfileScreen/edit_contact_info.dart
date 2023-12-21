@@ -5,14 +5,14 @@ import 'package:flutter/services.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
-class EditPersonalInfo extends StatefulWidget {
-  const EditPersonalInfo({super.key});
+class EditContactInfo extends StatefulWidget {
+  const EditContactInfo({super.key});
 
   @override
-  State<EditPersonalInfo> createState() => _EditPersonalInfoState();
+  State<EditContactInfo> createState() => _EditContactInfoState();
 }
 
-class _EditPersonalInfoState extends State<EditPersonalInfo> {
+class _EditContactInfoState extends State<EditContactInfo> {
   final _formKey = GlobalKey<FormState>();
 
   String? selectedGender;
@@ -100,45 +100,23 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                         height: 20,
                                       ),
 
-                                      Stack(
-                                        children: [
-                                          CircleAvatar(
-                                            radius: 60,
-                                            backgroundImage: AssetImage("assets/images/user.png"),
-                                          ),
-
-                                          Positioned(
-                                            top: 30,
-                                              right: 0,
-                                              left: 0,
-                                              child: Column(
-                                                children: [
-                                                  Icon(Icons.camera_alt, color: Colors.white,),
-                                                  SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  Text(
-                                                    "Upload an image",
-                                                    style: TextStyle(
-                                                        fontSize: 13,
-                                                        color: Colors.white),
-                                                  )
-                                                ],
-                                              )
-                                          )
-                                        ],
-                                      ),
 
 
                                       SizedBox(
                                         height: 20,
                                       ),
-                                      Text(
-                                        "Profile Picture",
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w600,
-                                            color: happiPrimary),
+
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "*Update your contact information",
+                                            style: TextStyle(
+                                                fontSize: 12,
+
+                                                color: Colors.red),
+                                          ),
+                                        ],
                                       ),
 
                                       SizedBox(
@@ -164,7 +142,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                                     hintStyle: TextStyle(
                                                         color: Colors.grey,
                                                         fontWeight: FontWeight.normal),
-                                                    labelText: "First Name",
+                                                    labelText: "United Kingdom",
                                                     labelStyle: TextStyle(
                                                         fontSize: 13,
                                                         color: Colors.black.withOpacity(0.5)),
@@ -214,7 +192,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                                     hintStyle: TextStyle(
                                                         color: Colors.grey,
                                                         fontWeight: FontWeight.normal),
-                                                    labelText: "Last Name",
+                                                    labelText: "Phone Number",
                                                     labelStyle: TextStyle(
                                                         fontSize: 13,
                                                         color: Colors.black.withOpacity(0.5)),
@@ -264,7 +242,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                                     hintStyle: TextStyle(
                                                         color: Colors.grey,
                                                         fontWeight: FontWeight.normal),
-                                                    labelText: "Email",
+                                                    labelText: "City",
                                                     labelStyle: TextStyle(
                                                         fontSize: 13,
                                                         color: Colors.black.withOpacity(0.5)),
@@ -316,7 +294,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                                     hintStyle: TextStyle(
                                                         color: Colors.grey,
                                                         fontWeight: FontWeight.normal),
-                                                    labelText: "Work ID",
+                                                    labelText: "Street Address",
                                                     labelStyle: TextStyle(
                                                         fontSize: 13,
                                                         color: Colors.black.withOpacity(0.5)),
@@ -350,8 +328,9 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                               ),
 
 
+
                                               SizedBox(
-                                                height: 50,
+                                                height: 100,
 
                                               ),
 
@@ -373,7 +352,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                                             borderRadius: BorderRadius.circular(15)),
                                                         child: Center(
                                                           child: Text(
-                                                            "Save",
+                                                            "Save changes",
                                                             style: TextStyle(color: Colors.white),
                                                           ),
                                                         ),

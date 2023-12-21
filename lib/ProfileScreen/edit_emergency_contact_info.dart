@@ -5,14 +5,14 @@ import 'package:flutter/services.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
-class EditPersonalInfo extends StatefulWidget {
-  const EditPersonalInfo({super.key});
+class EditEmergencyContactInfo extends StatefulWidget {
+  const EditEmergencyContactInfo({super.key});
 
   @override
-  State<EditPersonalInfo> createState() => _EditPersonalInfoState();
+  State<EditEmergencyContactInfo> createState() => _EditEmergencyContactInfoState();
 }
 
-class _EditPersonalInfoState extends State<EditPersonalInfo> {
+class _EditEmergencyContactInfoState extends State<EditEmergencyContactInfo> {
   final _formKey = GlobalKey<FormState>();
 
   String? selectedGender;
@@ -100,45 +100,23 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                         height: 20,
                                       ),
 
-                                      Stack(
-                                        children: [
-                                          CircleAvatar(
-                                            radius: 60,
-                                            backgroundImage: AssetImage("assets/images/user.png"),
-                                          ),
-
-                                          Positioned(
-                                            top: 30,
-                                              right: 0,
-                                              left: 0,
-                                              child: Column(
-                                                children: [
-                                                  Icon(Icons.camera_alt, color: Colors.white,),
-                                                  SizedBox(
-                                                    height: 10,
-                                                  ),
-                                                  Text(
-                                                    "Upload an image",
-                                                    style: TextStyle(
-                                                        fontSize: 13,
-                                                        color: Colors.white),
-                                                  )
-                                                ],
-                                              )
-                                          )
-                                        ],
-                                      ),
 
 
                                       SizedBox(
                                         height: 20,
                                       ),
-                                      Text(
-                                        "Profile Picture",
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w600,
-                                            color: happiPrimary),
+
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "*Update your emergency information",
+                                            style: TextStyle(
+                                                fontSize: 12,
+
+                                                color: Colors.red),
+                                          ),
+                                        ],
                                       ),
 
                                       SizedBox(
@@ -214,7 +192,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                                     hintStyle: TextStyle(
                                                         color: Colors.grey,
                                                         fontWeight: FontWeight.normal),
-                                                    labelText: "Last Name",
+                                                    labelText: "Lat Name",
                                                     labelStyle: TextStyle(
                                                         fontSize: 13,
                                                         color: Colors.black.withOpacity(0.5)),
@@ -264,7 +242,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                                     hintStyle: TextStyle(
                                                         color: Colors.grey,
                                                         fontWeight: FontWeight.normal),
-                                                    labelText: "Email",
+                                                    labelText: "Phone Number",
                                                     labelStyle: TextStyle(
                                                         fontSize: 13,
                                                         color: Colors.black.withOpacity(0.5)),
@@ -298,60 +276,10 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                               ),
 
 
-                                              SizedBox(
-                                                height: 20,
-                                              ),
-                                              Container(
-                                                padding: EdgeInsets.symmetric(horizontal: 10),
-                                                decoration: BoxDecoration(
-                                                    color: Colors.white,
-                                                    borderRadius: BorderRadius.circular(15),
-                                                    border:
-                                                    Border.all(color: Colors.black.withOpacity(0.1))),
-                                                child: TextFormField(
-                                                  style: TextStyle(color: Colors.black),
-                                                  decoration: InputDecoration(
-                                                    //hintText: 'Enter Username/Email',
-
-                                                    hintStyle: TextStyle(
-                                                        color: Colors.grey,
-                                                        fontWeight: FontWeight.normal),
-                                                    labelText: "Work ID",
-                                                    labelStyle: TextStyle(
-                                                        fontSize: 13,
-                                                        color: Colors.black.withOpacity(0.5)),
-                                                    enabledBorder: UnderlineInputBorder(
-                                                        borderSide: BorderSide(color: Colors.white)),
-                                                    focusedBorder: UnderlineInputBorder(
-                                                        borderSide: BorderSide(color: Colors.white)),
-                                                    border: InputBorder.none,
-                                                  ),
-
-                                                  inputFormatters: [
-                                                    LengthLimitingTextInputFormatter(225),
-                                                    PasteTextInputFormatter(),
-                                                  ],
-                                                  validator: (value) {
-                                                    if (value!.isEmpty) {
-                                                      return 'Contact name is required';
-                                                    }
-                                                    if (value.length < 3) {
-                                                      return 'Contact too short';
-                                                    }
-                                                  },
-                                                  textInputAction: TextInputAction.next,
-                                                  autofocus: false,
-                                                  onSaved: (value) {
-                                                    setState(() {
-                                                      //email = value;
-                                                    });
-                                                  },
-                                                ),
-                                              ),
 
 
                                               SizedBox(
-                                                height: 50,
+                                                height: 100,
 
                                               ),
 
@@ -373,7 +301,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                                             borderRadius: BorderRadius.circular(15)),
                                                         child: Center(
                                                           child: Text(
-                                                            "Save",
+                                                            "Save changes",
                                                             style: TextStyle(color: Colors.white),
                                                           ),
                                                         ),

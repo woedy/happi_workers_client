@@ -2,10 +2,14 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/Components/add_button_dialogbox.dart';
 import 'package:happi_workers_client/Components/generic_loading_dialogbox.dart';
+import 'package:happi_workers_client/Messages/my_chat_screen.dart';
 import 'package:happi_workers_client/Notifications/notifications.dart';
 import 'package:happi_workers_client/ProfileScreen/user_profile_screen.dart';
+import 'package:happi_workers_client/Sessions/my_sessions.dart';
 import 'package:happi_workers_client/Sessions/session_history_reschedule.dart';
+import 'package:happi_workers_client/Settings/settings_screen.dart';
 import 'package:happi_workers_client/VideoCall/video_call_screen.dart';
 import 'package:happi_workers_client/Webinars/webinars.dart';
 import 'package:happi_workers_client/constants.dart';
@@ -844,7 +848,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
                         ),
                         InkWell(
                           onTap: (){
-                            //  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => EarningsScreen()));
+                            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MySessions()));
                           },
                           child: Column(
                             children: [
@@ -859,12 +863,12 @@ class _SessionsScreenState extends State<SessionsScreen> {
                         InkWell(
                           onTap: (){
 
-                            /*  showDialog(
+                              showDialog(
                                           context: context,
                                           builder: (BuildContext context) {
                                             return AddButtonDialogBox();
                                           },
-                                        );*/
+                                        );
                           },
                           child: Column(
                             children: [
@@ -877,7 +881,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
                         InkWell(
                           onTap: (){
 
-                            //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MeetYourClients()));
+                            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MyChatScreen()));
 
                           },
                           child: Column(
@@ -894,7 +898,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
                         InkWell(
                           onTap: (){
 
-                            // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SettingsScreen()));
+                            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SettingsScreen()));
 
                           },
                           child: Column(

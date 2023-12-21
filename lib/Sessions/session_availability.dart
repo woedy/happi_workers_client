@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/Sessions/my_sessions.dart';
+import 'package:happi_workers_client/Sessions/sessions_screen.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -276,7 +278,7 @@ class _SessionsAvailabilityState extends State<SessionsAvailability> {
                                             InkWell(
                                               onTap: () {
 
-                                                //  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MyDeviceCheck()));
+                                                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MySessions()));
 
                                               },
                                               child: Container(

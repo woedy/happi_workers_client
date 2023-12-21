@@ -2,7 +2,14 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/Components/add_button_dialogbox.dart';
 import 'package:happi_workers_client/Messages/chats_screen.dart';
+import 'package:happi_workers_client/Notifications/notifications.dart';
+import 'package:happi_workers_client/ProfileScreen/personal_info.dart';
+import 'package:happi_workers_client/ProfileScreen/user_profile_screen.dart';
+import 'package:happi_workers_client/Sessions/my_sessions.dart';
+import 'package:happi_workers_client/Sessions/sessions_screen.dart';
+import 'package:happi_workers_client/Settings/settings_screen.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -103,7 +110,7 @@ class _MyChatScreenState extends State<MyChatScreen> {
                                             children: [
                                               InkWell(
                                                 onTap: (){
-                                                  //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => NotificationsScreen()));
+                                                  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => NotificationsScreen()));
 
                                                 },
                                                 child: Container(
@@ -120,7 +127,7 @@ class _MyChatScreenState extends State<MyChatScreen> {
                                               ),
                                               InkWell(
                                                 onTap: (){
-                                                 // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => PersonalInfo()));
+                                                 Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => UserProfileScreen()));
 
                                                 },
                                                 child: CircleAvatar(
@@ -224,6 +231,7 @@ class _MyChatScreenState extends State<MyChatScreen> {
                               ],
                             ),
                           ),
+
                           Positioned(
                             bottom: 0,
                             child: Container(
@@ -247,21 +255,22 @@ class _MyChatScreenState extends State<MyChatScreen> {
                                 children: [
                                   InkWell(
                                     onTap: (){
-                                      /*      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => DashboardScreen()));
-                        */  },
+                                      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionsScreen()));
+
+                                    },
                                     child: Column(
                                       children: [
-                                        Icon(Icons.home_outlined, color: happiGreen,),
+                                        Icon(Icons.home_outlined, color: Colors.black,),
                                         SizedBox(
                                           height: 4,
                                         ),
-                                        Text('Home', style: TextStyle(color: happiGreen, fontSize: 12),),
+                                        Text('Home', style: TextStyle(color: Colors.black, fontSize: 12),),
                                       ],
                                     ),
                                   ),
                                   InkWell(
                                     onTap: (){
-                                      //  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => EarningsScreen()));
+                                      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MySessions()));
                                     },
                                     child: Column(
                                       children: [
@@ -276,12 +285,12 @@ class _MyChatScreenState extends State<MyChatScreen> {
                                   InkWell(
                                     onTap: (){
 
-                                      /*  showDialog(
-                                          context: context,
-                                          builder: (BuildContext context) {
-                                            return AddButtonDialogBox();
-                                          },
-                                        );*/
+                                      showDialog(
+                                        context: context,
+                                        builder: (BuildContext context) {
+                                          return AddButtonDialogBox();
+                                        },
+                                      );
                                     },
                                     child: Column(
                                       children: [
@@ -294,16 +303,16 @@ class _MyChatScreenState extends State<MyChatScreen> {
                                   InkWell(
                                     onTap: (){
 
-                                      //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MeetYourClients()));
+                                      //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MyChatScreen()));
 
                                     },
                                     child: Column(
                                       children: [
-                                        Icon(Icons.mail_outline, color: Colors.black,),
+                                        Icon(Icons.mail_outline, color: happiGreen,),
                                         SizedBox(
                                           height: 4,
                                         ),
-                                        Text('Messages', style: TextStyle(color: Colors.black, fontSize: 12)),
+                                        Text('Messages', style: TextStyle(color: happiGreen, fontSize: 12)),
                                       ],
                                     ),
                                   ),
@@ -311,7 +320,7 @@ class _MyChatScreenState extends State<MyChatScreen> {
                                   InkWell(
                                     onTap: (){
 
-                                      // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SettingsScreen()));
+                                      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SettingsScreen()));
 
                                     },
                                     child: Column(

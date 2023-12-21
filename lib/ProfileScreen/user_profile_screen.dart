@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/ProfileScreen/personal_info.dart';
 
 class UserProfileScreen extends StatefulWidget {
   const UserProfileScreen({super.key});
@@ -105,10 +106,25 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                                       Expanded(
                                         child: Column(
                                           children: [
-                                            CircleAvatar(
-                                              radius: 50,
-                                              backgroundImage: AssetImage("assets/images/user.png"),
+                                            InkWell(
+                                              onTap: () {
+                                                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => PersonalInfo()));
+                                              },
+                                              child: Stack(
+                                                children: [
+                                                  CircleAvatar(
+                                                    radius: 50,
+                                                    backgroundImage: AssetImage("assets/images/user.png"),
 
+                                                  ),
+                                                  Positioned(
+                                                    top: 0,
+                                                      bottom: 0,
+                                                      left: 0,
+                                                      right: 0,
+                                                      child: Icon(Icons.edit, color: Colors.white,))
+                                                ],
+                                              ),
                                             ),
                                             SizedBox(
                                               height: 20,

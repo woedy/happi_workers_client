@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:happi_workers_client/Sessions/session_history_cancel.dart';
+import 'package:happi_workers_client/Sessions/sessions_screen.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -356,7 +357,7 @@ class _SessionHistoryState extends State<SessionHistory> {
                                             InkWell(
                                               onTap: () {
 
-                                                //  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MyDeviceCheck()));
+                                                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionsScreen()));
 
                                               },
                                               child: Container(

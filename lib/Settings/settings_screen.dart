@@ -3,6 +3,10 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/Components/add_button_dialogbox.dart';
+import 'package:happi_workers_client/Messages/my_chat_screen.dart';
+import 'package:happi_workers_client/Sessions/my_sessions.dart';
+import 'package:happi_workers_client/Sessions/sessions_screen.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -346,21 +350,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 children: [
                                   InkWell(
                                     onTap: (){
-                                      /*      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => DashboardScreen()));
-                        */  },
+                                      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SessionsScreen()));
+
+                                    },
                                     child: Column(
                                       children: [
-                                        Icon(Icons.home_outlined, color: happiGreen,),
+                                        Icon(Icons.home_outlined, color: Colors.black,),
                                         SizedBox(
                                           height: 4,
                                         ),
-                                        Text('Home', style: TextStyle(color: happiGreen, fontSize: 12),),
+                                        Text('Home', style: TextStyle(color: Colors.black, fontSize: 12),),
                                       ],
                                     ),
                                   ),
                                   InkWell(
                                     onTap: (){
-                                      //  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => EarningsScreen()));
+                                      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MySessions()));
                                     },
                                     child: Column(
                                       children: [
@@ -375,12 +380,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                   InkWell(
                                     onTap: (){
 
-                                      /*  showDialog(
-                                          context: context,
-                                          builder: (BuildContext context) {
-                                            return AddButtonDialogBox();
-                                          },
-                                        );*/
+                                      showDialog(
+                                        context: context,
+                                        builder: (BuildContext context) {
+                                          return AddButtonDialogBox();
+                                        },
+                                      );
                                     },
                                     child: Column(
                                       children: [
@@ -393,7 +398,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                   InkWell(
                                     onTap: (){
 
-                                      //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MeetYourClients()));
+                                      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MyChatScreen()));
 
                                     },
                                     child: Column(
@@ -410,16 +415,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                   InkWell(
                                     onTap: (){
 
-                                      // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SettingsScreen()));
+                                      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SettingsScreen()));
 
                                     },
                                     child: Column(
                                       children: [
-                                        Icon(Icons.settings, color: Colors.black,),
+                                        Icon(Icons.settings, color: happiGreen,),
                                         SizedBox(
                                           height: 4,
                                         ),
-                                        Text('Settings', style: TextStyle(color: Colors.black, fontSize: 12)),
+                                        Text('Settings', style: TextStyle(color: happiGreen, fontSize: 12)),
                                       ],
                                     ),
                                   ),

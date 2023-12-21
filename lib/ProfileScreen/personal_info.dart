@@ -2,6 +2,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/ProfileScreen/edit_contact_info.dart';
+import 'package:happi_workers_client/ProfileScreen/edit_emergency_contact_info.dart';
+import 'package:happi_workers_client/ProfileScreen/edit_password.dart';
+import 'package:happi_workers_client/ProfileScreen/edit_personal_Info.dart';
+import 'package:happi_workers_client/ProfileScreen/user_profile_screen.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -122,7 +127,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
 
                                             InkWell(
                                               onTap: (){
-                                                //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ProfileOverview()));
+                                                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => EditPersonalInfo()));
 
                                               },
                                               child: Container(
@@ -151,7 +156,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                             ),
                                             InkWell(
                                               onTap: (){
-                                               // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => EditPersonalInfo()));
+                                               Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => EditPassword()));
 
                                               },
                                               child: Container(
@@ -180,7 +185,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                             ),
                                             InkWell(
                                               onTap: (){
-                                               // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MyPersonalInfo()));
+                                               Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => EditContactInfo()));
 
                                               },
                                               child: Container(
@@ -209,7 +214,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                             ),
                                             InkWell(
                                               onTap: (){
-                                                //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => PracticedDetails()));
+                                                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => EditEmergencyContactInfo()));
 
                                               },
                                               child: Container(
