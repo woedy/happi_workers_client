@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:happi_workers_client/Components/theme.dart';
+import 'package:happi_workers_client/MedicalRecords/medical_records_screen.dart';
 import 'package:happi_workers_client/Welcome/welcome_page1.dart';
 import 'package:happi_workers_client/constants.dart';
 
@@ -59,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (BuildContext context, AsyncSnapshot snapshot) {
 
           //return api_key == null ? SplashScreen() : HomeScreen();
+          //return MedicalRecordsScreen();
           return WelcomePage1();
 
         });

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/Practitioners/practitioner_details.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -166,52 +167,60 @@ class _AllPractitionersState extends State<AllPractitioners> {
                       ),
                       itemBuilder: (BuildContext context, int index) {
                         // Replace this container with your custom widget for each grid item
-                        return Container(
-
-                          padding: EdgeInsets.all(10),
-                          margin: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.white
-
-                          ),
-
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  CircleAvatar(
-                                    radius: 25,
-                                    backgroundImage: AssetImage("assets/images/user3.png"),
-                                  ),
-
-                                ],
-                              ),
-
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Annette Black",  style: TextStyle(fontSize: 15)),
-                                  Text("CLINICAL PSYCHOLOGIST",  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, )),
-                                  Container(
-                                      padding: EdgeInsets.all(2),
-                                      width: 50,
-                                      decoration: BoxDecoration(
-                                          color: happiGreen.withOpacity(0.2),
-                                          borderRadius: BorderRadius.circular(5)
-                                      ),
-                                      child: Center(child: Text("English",  style: TextStyle(fontSize: 10, color: Colors.green)))),
-                                ],
-                              ),
-
-
-                            ],
+                        return InkWell(
+                          onTap: ()
+                          {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    PractitionerDetails()));
+                          },
+                          child: Container(
+                          
+                            padding: EdgeInsets.all(10),
+                            margin: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Colors.white
+                          
+                            ),
+                          
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 25,
+                                      backgroundImage: AssetImage("assets/images/user3.png"),
+                                    ),
+                          
+                                  ],
+                                ),
+                          
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Annette Black",  style: TextStyle(fontSize: 15)),
+                                    Text("CLINICAL PSYCHOLOGIST",  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, )),
+                                    Container(
+                                        padding: EdgeInsets.all(2),
+                                        width: 50,
+                                        decoration: BoxDecoration(
+                                            color: happiGreen.withOpacity(0.2),
+                                            borderRadius: BorderRadius.circular(5)
+                                        ),
+                                        child: Center(child: Text("English",  style: TextStyle(fontSize: 10, color: Colors.green)))),
+                                  ],
+                                ),
+                          
+                          
+                              ],
+                            ),
                           ),
                         );
                       },

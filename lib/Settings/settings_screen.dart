@@ -3,10 +3,16 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/Authentication/SignIn/sign_in_screen.dart';
 import 'package:happi_workers_client/Components/add_button_dialogbox.dart';
 import 'package:happi_workers_client/Messages/my_chat_screen.dart';
+import 'package:happi_workers_client/Notifications/notifications.dart';
+import 'package:happi_workers_client/ProfileScreen/personal_info.dart';
+import 'package:happi_workers_client/ProfileScreen/user_profile_screen.dart';
 import 'package:happi_workers_client/Sessions/my_sessions.dart';
 import 'package:happi_workers_client/Sessions/sessions_screen.dart';
+import 'package:happi_workers_client/Settings/faqs_screen.dart';
+import 'package:happi_workers_client/WellBeing/well_being_kit.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -94,7 +100,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                             children: [
                                               InkWell(
                                                 onTap: (){
-                                                  //Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => NotificationsScreen()));
+                                                  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => NotificationsScreen()));
 
                                                 },
                                                 child: Container(
@@ -111,7 +117,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                               ),
                                               InkWell(
                                                 onTap: (){
-                                                 // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => PersonalInfo()));
+                                                 Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => UserProfileScreen()));
 
                                                 },
                                                 child: CircleAvatar(
@@ -155,7 +161,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                               children: [
                                                 InkWell(
                                                   onTap: (){
-                                                   // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => MyAppointments()));
+                                                   Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => WellBeingKit()));
 
                                                   },
                                                   child: Row(
@@ -187,7 +193,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                               children: [
                                                 InkWell(
                                                   onTap: (){
-                                                  //  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => FAQsScreens()));
+                                                  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => FAQsScreens()));
 
                                                   },
                                                   child: Row(
@@ -270,7 +276,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                           children: [
                                             InkWell(
                                               onTap: (){
-                                                //  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => FAQsScreens()));
+                                                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => PersonalInfo()));
 
                                               },
                                               child: Row(
@@ -297,7 +303,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                               children: [
                                                 InkWell(
                                                   onTap: (){
-                                                   // Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SignInScreen()));
+                                                   Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SignInScreen()));
 
                                                   },
                                                   child: Row(

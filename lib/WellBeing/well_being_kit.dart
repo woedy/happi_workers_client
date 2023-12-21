@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:happi_workers_client/WellBeing/well_being_practitioners.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
@@ -330,9 +331,9 @@ class _WellBeingKitState extends State<WellBeingKit> {
 
                 InkWell(
                   onTap: () {
-               /*     Navigator.of(context).push(MaterialPageRoute(
+                    Navigator.of(context).push(MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            SignUpPassword()));*/
+                            WellBeingPractitioners()));
                   },
                   child: Container(
                     padding: EdgeInsets.all(20),
@@ -342,7 +343,7 @@ class _WellBeingKitState extends State<WellBeingKit> {
                         borderRadius: BorderRadius.circular(15)),
                     child: Center(
                       child: Text(
-                        "Continue",
+                        "Next",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),

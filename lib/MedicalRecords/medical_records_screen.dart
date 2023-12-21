@@ -3,14 +3,14 @@ import 'package:flutter/services.dart';
 import 'package:happi_workers_client/constants.dart';
 
 
-class LMSScreen extends StatefulWidget {
-  const LMSScreen({super.key});
+class MedicalRecordsScreen extends StatefulWidget {
+  const MedicalRecordsScreen({super.key});
 
   @override
-  State<LMSScreen> createState() => _LMSScreenState();
+  State<MedicalRecordsScreen> createState() => _MedicalRecordsScreenState();
 }
 
-class _LMSScreenState extends State<LMSScreen> {
+class _MedicalRecordsScreenState extends State<MedicalRecordsScreen> {
   final _formKey = GlobalKey<FormState>();
 
   String? appointmentType;
@@ -72,81 +72,6 @@ class _LMSScreenState extends State<LMSScreen> {
                 ),
                 SizedBox(height: 30),
 
-                // Heading "Your Courses"
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Text(
-                    "Your Courses",
-                    style: TextStyle(
-                      fontSize: 48,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 20),
-
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10,),
-                  margin: EdgeInsets.symmetric(horizontal: 10,),
-                  decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(
-                          color: Colors.black.withOpacity(0.1))),
-                  child: TextFormField(
-                    style: TextStyle(color: Colors.black),
-
-                    decoration: InputDecoration(
-                      //hintText: 'Enter Username/Email',
-
-                      hintStyle: TextStyle(
-                          color: Colors.grey,
-                          fontWeight: FontWeight.normal),
-                      labelText: "Search Course here",
-                      suffixIcon: Icon(Icons.search),
-                      labelStyle: TextStyle(
-                          fontSize: 13,
-                          color: Colors.black.withOpacity(0.5)),
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide:
-                          BorderSide(color: Colors.white)),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                          BorderSide(color: Colors.white)),
-                      border: InputBorder.none,
-                    ),
-
-                    inputFormatters: [
-                      LengthLimitingTextInputFormatter(225),
-                      PasteTextInputFormatter(),
-                    ],
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        return 'Email is required';
-                      }
-                      if (value.length < 3) {
-                        return 'Name too short';
-                      }
-                      String pattern =
-                          r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
-                          r"{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]"
-                          r"{0,253}[a-zA-Z0-9])?)*$";
-                      RegExp regex = RegExp(pattern);
-                      if (!regex.hasMatch(value))
-                        return 'Enter a valid email address';
-
-                      return null;
-                    },
-                    textInputAction: TextInputAction.next,
-                    autofocus: false,
-                    onSaved: (value) {
-                      setState(() {
-                        //email = value;
-                      });
-                    },
-                  ),
-                ),
 
                 // Scrollable content between heading and button
                 Expanded(
@@ -156,9 +81,27 @@ class _LMSScreenState extends State<LMSScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+
+                        SizedBox(
+                          height: 50,
+                        ),
+
                         Container(
-                          child: Text("There are no available courses yet", style: TextStyle(color: Colors.red),),
-                        )
+                          padding: EdgeInsets.all(50),
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(100)
+                          ),
+                          child: Icon(Icons.lock, color: Colors.white, size: 50,),
+                        ),
+                        SizedBox(
+                          height: 50,
+                        ),
+
+                        Text("Welcome to", style: TextStyle(fontSize: 36),),
+
+                        Text("medical records", style: TextStyle(fontSize: 36, color: happiPrimary),)
+
                       ],
                     ),
                   ),
@@ -178,7 +121,7 @@ class _LMSScreenState extends State<LMSScreen> {
                         borderRadius: BorderRadius.circular(15)),
                     child: Center(
                       child: Text(
-                        "Continue",
+                        "Request Medical Records",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
