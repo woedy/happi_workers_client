@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:happi_workers_client/Authentication/SignIn/sign_in_screen.dart';
 import 'package:happi_workers_client/Welcome/welcome_page2.dart';
 import 'package:happi_workers_client/constants.dart';
 
@@ -82,7 +83,7 @@ class _WelcomePage1State extends State<WelcomePage1> {
                             ),
                             InkWell(
                               onTap: (){
-                                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => WelcomePage2()));
+                                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SignInScreen()));
 
                             /*    showDialog(
                                   context: context,
