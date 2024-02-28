@@ -26,7 +26,7 @@ A new happi_workers_client project.
 
 **Run the Project:**
 * •	Connect a device or start an emulator.
-* •	Run the project using flutter run in the terminal.
+* •	Run the project using flutter run in the terminal.  
 
 **Troubleshooting:**
 * •	If there are any issues, refer to the Flutter documentation or search for solutions online.
